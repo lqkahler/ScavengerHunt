@@ -7,7 +7,7 @@ export const CheckPoint = () => {
   const [checkedIn, setCheckedIn] = useState(false);
   const [error, setError] = useState(false);
   const checkPointId = new URLSearchParams(useLocation().search).get('check_point_id');
-  const invalidCheckPoint = !checkPointId && checkPointId.length !== 36;
+  const invalidCheckPoint = !checkPointId || checkPointId.length !== 36;
 
   if (invalidCheckPoint || error) {
     return (
