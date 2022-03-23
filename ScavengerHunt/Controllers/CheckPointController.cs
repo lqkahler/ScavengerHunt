@@ -25,7 +25,7 @@ namespace ScavengerHunt.Controllers {
                 return NotFound();
             }
 
-            return Ok(new CheckPointDto(checkPoint.Name));
+            return Ok(new CheckPointDto(checkPoint.Name, checkPoint.Image));
         }
 
         [HttpPost("{checkPointId}/visit")]
