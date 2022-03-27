@@ -8,6 +8,7 @@ export class Layout extends Component {
     return (
       <div>
         <Container>
+          <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt='Logo' />
           {this.props.children}
         </Container>
       </div>
